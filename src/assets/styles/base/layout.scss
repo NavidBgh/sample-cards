@@ -1,12 +1,33 @@
 .flex{
     display: flex;
 
+    &.col{
+        flex-direction: column;
+        height: 100%;
+    }
+
     &.a-c{
         align-items: center;
     }
 
     &.j-sb{
         justify-content: space-between;
+    }
+
+    &.j-sa{
+        justify-content: space-around;
+    }
+
+    &.g-16{
+        gap: 16px;
+    }
+
+    &.g-8{
+        gap: 8px;
+    }
+
+    &.full-width{
+        width: 100%;
     }
 }
 

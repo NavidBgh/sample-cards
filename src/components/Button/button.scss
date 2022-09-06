@@ -2,12 +2,12 @@
 
 .button {
   border: 2px solid $primary;
-  width: 150px;
+  width: 264px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
-  border-radius: 10px;
+  height: 32px;
+  border-radius: 12px;
   cursor: pointer;
 
   &.primary {

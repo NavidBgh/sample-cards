@@ -21,11 +21,11 @@ const courses = [
     description:
       "لورم ایپسوم متن ساختگی ورم ایپسوم متن ساختگی ورم ایپسوم متن ساختگی",
     type: "تمرین",
-    time: 32,
-    score: 45,
-    correct: 3,
-    failed: 2,
-    empty: 0,
+    time: 12,
+    score: 55,
+    correct: 5,
+    failed: 1,
+    empty: 3,
     done: true,
   },
 ];
@@ -56,17 +56,50 @@ const Courses = () => {
                   </div>
                 </div>
 
-                <div>
+                <div className="flex g-16 course__content">
                   <Content>
-                    <div className="course__score">
-                      <div className="flex a-c j-sb">
-                        <div className="course__bullet" />
-                        <div>درست</div>
-                      </div>
+                    <div className="flex col j-sa">
+                      <div className="course__score">
+                        <div className="flex a-c j-sb">
+                          <div className="course__bullet" />
+                          <div>درست</div>
+                        </div>
 
-                      <div>{course.correct}</div>
+                        <div>{course.correct}</div>
+                      </div>
+                      <div className="course__score">
+                        <div className="flex a-c j-sb">
+                          <div className="course__bullet" />
+                          <div>نادرست</div>
+                        </div>
+
+                        <div>{course.failed}</div>
+                      </div>
+                      <div className="course__score">
+                        <div className="flex a-c j-sb">
+                          <div className="course__bullet" />
+                          <div>نزده</div>
+                        </div>
+
+                        <div>{course.empty}</div>
+                      </div>
                     </div>
                   </Content>
+
+                  <div className="flex col g-8">
+                    <Content>
+                      <div className="flex col a-c">
+                        <div>مدت زمان انجام</div>
+                        <div>{course.time}</div>
+                      </div>
+                    </Content>
+                    <Content>
+                      <div className="flex col a-c">
+                        <div>نمره‌ی شما</div>
+                        <div>{course.score}</div>
+                      </div>
+                    </Content>
+                  </div>
                 </div>
 
                 <div className="course__button">

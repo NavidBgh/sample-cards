@@ -1,5 +1,7 @@
 import React from "react";
 import { Button, Card, Container, Content } from "../components";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 const courses = [
   {
@@ -36,8 +38,8 @@ const Courses = () => {
           {courses.map((course, index) => (
             <div className="course__item" key={index}>
               <div className="course__timeline">
-                <div className="course__process-ring">
-                  <div className="">IMG</div>
+                <div style={{ width: 73 }}>
+                  <CircularProgressbar value={60} text={<tspan>IMG</tspan>} />
                 </div>
                 <div className="course__process-questions">20 سوال</div>
               </div>
@@ -48,7 +50,9 @@ const Courses = () => {
                     <div>
                       {course.title} <span>({course.type})</span>
                     </div>
-                    <div className="course__description">{course.description}</div>
+                    <div className="course__description">
+                      {course.description}
+                    </div>
                   </div>
                 </div>
 
@@ -74,7 +78,6 @@ const Courses = () => {
               </Card>
             </div>
           ))}
-          z
         </div>
       </div>
     </Container>
